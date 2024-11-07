@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-large;
+        }
+        #one {
+            width: 1200px;
+            padding-left: 300px;
+            
+        }
+        #two{
+            width: 400px;
+            padding-left: 800px;
+        }
+
+        #continue {
+            width: 1200px;
+            height: 100px;
+            font-size: larger;
+        }
+        #redeem{
+            color: white;
+            background-color: rosybrown;
+            ;
+        }
+        
+    </style>
+    <title>Form1Trial</title>
+</head>
+<body style="background-color: rgb(237, 250, 250);"> 
+
+<table>
+<tr>
+    <td><div id="one">
+        <h1>Billing Address</h1>
+
+        <table>
+
+            <tr>
+                
+                <td>First Name </td>
+                <td><input type="text"></td>
+                <td>Last Name</td>
+                <td><input type="text"></tr></td>
+            </tr>
+
+            <tr>
+                <td>Username</td>
+                <td><input type="text" placeholder="Username"></td>
+            </tr>
+
+            <tr>
+                <td>Email(Optional)</td>
+                <td><input type="text" placeholder="you@example.com"></td>
+            </tr>
+
+            <tr>
+                <td>Address</td>
+                <td><input type="text" placeholder="1234 Main St"></td>
+            </tr>
+
+            <tr>
+                <td>Address 2(Optional)</td>
+                <td><input type="text" placeholder="Apartment or suite"></td>
+            </tr>
+
+
+
+
+            <tr>
+                    <td>Country</td>
+                <td>
+                        <select name="Country" id="Country" aria-placeholder="Choose..">
+                            <option value="" ></option>
+                            <option value="India">India</option>
+                            <option value="Banglaesh">Bangaladesh</option>
+                            <option value="">Russia</option>
+                            <option value="">Pakistan</option>
+                            </select>
+                </td>
+
+                    
+
+                <td>State</td>
+                <td>
+                    <select name="State" id="State">
+                        <option value=""></option>
+                        <option value="TamilNadu">TamilNadu</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Gujaraj">Gujarat</option>
+                    </select>
+                </td>
+
+                <td>Zip</td><td><input type="text" placeholder=""></td>
+            </tr>
+
+        
+            <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Shipping address is the same as my Billing Address </td> 
+            
+
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>Save this Information for Next Time </td> 
+
+            </tr>
+         
+        </table>
+        <hr>
+                <h1>Payment</h1>
+                <input type="radio">Credit Card<br>
+                <input type="radio">Debit Card<br>
+                <input type="radio">Paypal Card<br>
+
+        <table>
+            <tr>
+                <td>Name on Card</td>
+                <td>Credit card number</td>
+            </tr>
+
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td><sub>Full name as displayed on card</sub></td>
+            </tr>
+            <br>
+
+            <tr>
+                <td>Expiration</td>
+                <td>CVV</td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+
+        </table>
+        <hr>
+        <button style="background-color: blue;" id="continue"><h5 style="color: white;">Continue to Checkout</h5> </button>
+        
+    </div></td>
+
+    <td><div class="two">
+        <table>
+            <tr>
+                <td>Your cart</td>
+                <td>3</td>
+            </tr>
+
+
+            <div id="cartbox">
+
+            <tr>
+                <td>Product Name</td>
+                <td>12$</td>
+            </tr>
+
+            <tr><td><sub>brief description</sub></td></tr>
+
+            <tr>
+                <td>Second Product</td>
+                <td>8$</td>
+            </tr>
+
+            <tr><td><sub>brief description</sub></td></tr>
+
+            <tr>
+                <td>Third item</td>
+                <td>5$</td>
+            </tr>
+
+            <tr><td><sub>brief description</sub></td></tr>
+
+            <tr>
+                <td>Promo code</td>
+                <td>-5$</td>
+            </tr>
+
+            <tr><td><sub>EXAMPLE CODE</sub></td></tr>
+
+            <tr>
+                <td>Total(USD)</td>
+                <td>20$</td>
+            </tr>
+        </div>
+
+        </table>
+
+            <table>
+                <tr>
+                    <td><p>
+                        <input type="text" name="" id="" placeholder="promo code">
+                    </p></td>
+    
+                    <td><p><button id="redeem">Redeem</button></p></td>
+                </tr>
+            </table>
+            
+            
+
+    </div>
+</td>
+</tr>
+</table>
+    
+
+    
+    
+
+        
+        
+
+
+
+      
+</body>
+</html>
