@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Second Form</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+     <div id="main">
+    <div class="main1">
+        <h1>Conference Registration</h1>
+        <p class="toppara">Please book for your conference by filling the form below, specify the expected number joining the conference</p>
+        <hr class="hrline" >
+    
+        <table>
+            <tr>
+                <td>Full Name *</td>
+                <td><input type="text" class="namebox"></td>
+                <td><input type="text" class="namebox"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="name"><sub>First Name</sub></td>
+                <td class="name"><sub>Last Name</sub></td>
+            </tr>
+            
+            <tr>
+                <td>Email *</td>
+                <td colspan="2"><input type="text" placeholder="ex: myname@example.com" class="inp"></td>
+    
+            </tr>
+            <tr>
+                <td></td>
+                <td class="opac"><sub>example@example.com</sub></td>
+    
+            </tr>
+            <tr id="rowspace">
+                <td>Phone Number *</td>
+                <td colspan="2"><input type="text" placeholder="(000) 000-0000" class="inp"></td>
+    
+            </tr>
+
+            <tr>
+                <td style="width: 500px;">Number of people attending *</td>
+                <td colspan="2 "><input id="number" placeholder="0" class="inp"></td>
+    
+            </tr>
+            <br>
+                <tr>
+                    <td>Address *</td>
+                </tr>
+                <tr>
+                    <td><sub>Street Address</sub></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" class="address"></td>
+                </tr>
+                <tr><td><sub>Street Address Line 2</sub></td></tr>
+            </table>
+            <table>
+                <tr>
+                    <td colspan="2"><input type="text" id="leftbox"></td>
+                    <td colspan="2"><input type="text" id="rightbox"></td>
+                </tr>
+                </table>
+                <table>
+                <tr>
+                    <td><sub>City</sub></td>
+                    <td></td>
+                    <td id="stpro"><sub>State/Province</sub></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" class="address"></td>
+                </tr>
+                <tr>
+                    <td><sub>Postal/Zipcode</sub></td>
+                </tr>
+    
+        </table>
+        <div>
+            <p class="para" id="payment">Payments are processed through PayPal. You may pay using an existing PayPal account, or any major credit card / debit card</p>
+        </div>
+
+        <h3> My Products</h3>
+        
+    
+        <div id="warning">
+            <div>
+            <i class="fa-solid fa-triangle-exclamation" id="warnicon"></i>
+            </div>
+            <div>
+            <p class="fontwar">You haven't finished configuring this payment integration.</p>
+            <p class="fontwar">Go to <b>Payment Settings</b> to configure your payment details and products.</p>
+            </div>
+        </div>
+    
+    
+        <br>
+        <table>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td class="checkcontent"><b>Conference Full-Access w/ Dinner (member)</b></td>
+                <td id="amt1"><b>$125.00</b></td>
+            </tr>
+        </table>
+        <hr class="hrline">
+        <table>
+    
+            <tr>
+                <td><input type="checkbox"></td>
+                <td class="checkcontent"><b>Conference Full-Access w/ Dinner (non-member)</b></td>
+                <td id="amt2"><b>$150.00</b></td>
+            </tr>
+        </table>
+        <hr class="hrline">
+        <table>
+            <tr>
+                <td colspan="3" id="total">Total</td>
+                <td colspan="3">$0.00</td>
+            </tr>
+    
+            <tr></tr>
+        </table>
+        <div>
+            <p>Payment Methods</p>
+        </div>
+        <table class="debpay">
+            <tr>
+                <td><input type="radio" class="radio1"></td>
+                <td class="radiocontent"><i class="fa-regular fa-credit-card"></i> Debit or Credit Card</td>
+            </tr>
+            <tr>
+                <td><input type="radio" class="radio1"></td>
+                <td class="radiocontent"><i class="fa-brands fa-paypal"></i> PayPal</td>
+            </tr>
+            
+        </table>
+        <hr class="hrline">
+        <div style="align-items: center;">
+            <button id="submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
