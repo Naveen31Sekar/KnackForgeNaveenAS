@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    
+    <title>Form1Trial</title>
+</head>
+<body> 
+<div class="main">
+
+
+<div class="mainpage">
+<table>
+<tr>
+    <td><div id="one">
+        <h1 class="billpay">Billing Address</h1>
+
+        <table>
+
+            <tr>
+                
+                <td class="twocol">First Name </td>
+                
+                <td class="twocol">Last Name</td>
+            </tr>
+            
+            <tr><td>
+                <input type="text" class="twocolbox" >
+            </td>
+            <td><input type="text" class="twocolbox"></td></tr>
+            <tr>
+            </table>
+            
+            <table>
+                <td>Username</td>
+                
+            </tr>
+            <tr><td><input type="text" placeholder="Username" class="sincolbox"></td></tr>
+
+            <tr>
+                <td>Email(Optional)</td>
+                
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="you@example.com" class="sincolbox"></td>
+            </tr>
+
+            <tr>
+                <td>Address</td>
+                
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="1234 Main St" class="sincolbox"></td>
+            </tr>
+
+            <tr>
+                <td>Address 2(Optional)</td>
+                
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Apartment or suite" class="sincolbox"></td>
+            </tr>
+            </table>
+            <table>
+            <tr>
+                <td class="tccontent">Country</td>
+                <td class="tccontent">State</td>
+                <td class="tccontent">Zip</td>
+            </tr>
+            <tr>
+                <td class="tcbox" >
+                    <select name="Country" id="tcbox1" class="inputboxdd">
+                        <option value="" ></option>
+                        <option value="India">India</option>
+                        <option value="Banglaesh">Bangaladesh</option>
+                        <option value="">Russia</option>
+                        <option value="">Pakistan</option>
+                        </select>
+                </td>
+                <td class="tcbox" >
+                    <select name="State" id="tcbox2" class="inputboxdd">
+                        <option value=""></option>
+                        <option value="TamilNadu">TamilNadu</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Gujaraj">Gujarat</option>
+                    </select>
+                </td>
+                <td class="tcbox">
+                    <input type="text" placeholder="" id="tcbox3" class="inputbox">
+                </td>
+
+            </tr>
+            </table>
+            <hr class="hrline">
+            <table>
+            <tr>
+                    <td><input type="checkbox" class="check"></td>
+                    <td class="cbcontent">Shipping address is the same as my Billing Address </td> 
+            
+
+            <tr>
+                <td><input type="checkbox" class="check"></td>
+                <td class="cbcontent">Save this Information for Next Time </td> 
+
+            </tr>
+         
+        </table>
+        <table>
+        <hr class="hrline">
+                <h1 class="billpay">Payment</h1>
+                <input type="radio" >Credit Card<br>
+                <input type="radio" >Debit Card<br>
+                <input type="radio" >Paypal Card<br>
+            </tablet>
+        <table>
+            <tr>
+                <td class="twocol">Name on Card</td>
+                <td class="twocol">Credit card number</td>
+            </tr>
+
+            <tr>
+                <td><input type="text" class="twocolbox"></td>
+                <td><input type="text" class="twocolbox"></td>
+            </tr>
+
+            <tr>
+                <td><sub>Full name as displayed on card</sub></td>
+            </tr>
+            <br>
+            </table>
+            <table class="expcvvtable">
+            <tr>
+                <td>Expiration</td>
+                <td>CVV</td>
+            </tr>
+            <tr>
+                <td><input type="text" class="inputbox"></td>
+                <td><input type="text" class="inputbox" id="cvvbox"></td>
+            </tr>
+
+
+        </table>
+        <hr class="hrline">
+        <button class="continuebox"><h3 class="checkoutpara">Continue to Checkout</h3></button>
+    </td>
+</tr>
+</table>
+    </div>
+
+
+
+
+
+<div class="subpage">
+    <table>
+        <td><div class="two">
+            <table>
+                <tr class="yourcartclass">
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <td id="yourcart">Your cart</td>
+                    <td id="yourcart2">3</td>
+                </tr>
+    
+                </table>
+                <div id="cartbox">
+                <table class="carttable">    
+                <tr>
+                    <td>Product Name</td>
+                    <td>12$</td>
+                </tr>
+    
+                <tr><td><sub>brief description</sub></td></tr>
+    
+                <tr>
+                    <td>Second Product</td>
+                    <td>8$</td>
+                </tr>
+    
+                <tr><td><sub>brief description</sub></td></tr>
+    
+                <tr>
+                    <td>Third item</td>
+                    <td>5$</td>
+                </tr>
+    
+                <tr><td><sub>brief description</sub></td></tr>
+    
+                <tr>
+                    <td>Promo code</td>
+                    <td>-5$</td>
+                </tr>
+    
+                <tr><td><sub>EXAMPLE CODE</sub></td></tr>
+    
+                <tr>
+                    <td>Total(USD)</td>
+                    <td>20$</td>
+                </tr>
+            </div>
+    
+            </table>
+    
+                <table class="promoredeem">
+                    <tr>
+                        <td><p>
+                            <input type="text" name="" id="promocodebox" placeholder="Promo code" class="inputbox">
+                        </p></td>
+        
+                        <td><button id="redeem">Redeem</button></td>
+                    </tr>
+                </table>
+
+
+
+</div>
+</div>
+</body>
+</html>
