@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="align-items: center; padding-left: 200px; padding-top: 100px;">
+    <div class="container width border border-5 p-5 dark mx-20">
+        <header class="sticky-top bg-white">
+            <h1>Task 3</h1>
+        </header>
+        <div id="division" style="height: 100px; width: 100px; font-size: xx-large;">Login</div>
+        <button onclick="change()" style="height: 30px; width: 60px; font-size: larger;">
+            Click
+        </button>
+    </div>
+    <script>
+        function change() {
+            const one = document.getElementById('division');
+            one.textContent = "Logout";
+        }
+    </script>
+</body>
+</html>
