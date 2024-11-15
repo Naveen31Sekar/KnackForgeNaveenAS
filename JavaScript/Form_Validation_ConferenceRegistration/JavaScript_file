@@ -1,0 +1,185 @@
+
+function setError(input,message){
+    const formControl = input.parentElement;
+
+    const small = formControl.querySelector('.alertmessage');
+    small.innerHTML ='<p style="color: red; font-size:smaller;">'+message+'<p/>'
+
+}
+function setSuccess(input){
+    const formControl = input.parentElement;
+    
+    const small = formControl.querySelector('.alertmessage');
+    small.innerHTML = ''
+}
+
+
+const form = document.getElementById("form1")
+const firstname = document.getElementById("fname")
+const lastname = document.getElementById("lname")
+const email = document.getElementById("email")
+const phonenumber = document.getElementById("number")
+const nopa = document.getElementById("nopa")
+const line2 = document.getElementById("line2")
+const city = document.getElementById("city")
+const state = document.getElementById("state")
+const postal = document.getElementById("postal")
+const member = document.getElementById("memberOption")
+const nonmember = document.getElementById("nonMemberOption")
+const memNonMem = document.getElementById("memnonmem")
+const PM = document.getElementById("paymentmethod")
+
+
+form.addEventListener('submit', e=>{
+    e.preventDefault();
+    checkInput();
+    // setSuccess();
+})
+
+
+
+
+function checkInput(){
+
+    const fnamevalue = firstname.value.trim();
+    const lnamevalue = lastname.value;  
+    const emailvalue = email.value;
+    const numbervalue = phonenumber.value; 
+    const nopavalue = nopa.value;
+    const line2value = line2.value; 
+    const cityvalue = city.value;
+    const statevalue = state.value;
+    const postalvalue = postal.value;
+    const memvalue = member.value;
+    const nonmemvalue = nonmember.value;
+    const memnonmem = memNonMem;
+    const pm = PM;
+
+
+
+
+    
+    //firstname
+    if(fnamevalue ===''){
+        setError(firstname, 'First Name cannot be Blank*');
+    }
+
+    else if(!isNaN(fnamevalue)){
+        setError(firstname, 'First Name cannot be a Number*');
+    }
+    else{
+        setSuccess(firstname)
+    }
+    //lastname
+    if(lnamevalue ===''){
+        setError(lastname, 'Last Name cannot be Blank*');
+    }
+    else if(!isNaN(lnamevalue)){
+        setError(lastname, 'Last Name cannot be a Number*');
+    }
+    else{
+        setSuccess(lastname)
+    }
+
+    
+    //email
+
+    if(emailvalue ===''){
+        setError(email, 'email cannot be empty*');
+    }
+    else{
+        setSuccess(email)
+    }
+    
+    //phonenumber
+    if(numbervalue ===''){
+        setError(phonenumber, 'Phone Number cannot be empty*');
+    }
+    else if(numbervalue<0){
+        setError(phonenumber,'Phone number cannot be negative');
+    }
+    else if(numbervalue.length!=10){
+        setError(phonenumber, 'Enter exactly 10 numbers');
+    }
+    else{
+        setSuccess(phonenumber)
+    }
+    //no of people attending
+    if(nopavalue ===''){
+        setError(nopa, 'This field cannot be empty*');
+    }
+    else if(nopavalue<1){
+        setError(nopa,'enter atleast 1 *');
+    }
+    else if(nopavalue>5){
+        setError(nopa,'maximum 5 members*');
+    }
+    else{
+        setSuccess(nopa)
+    }
+    //line2
+    if(line2value ===''){
+        setError(line2, 'Address Cannot be Empty*');
+    }
+    else if(line2value.length<20){
+        setError(line2,'Short address, please provide in detail*')
+    }
+    else{
+        setSuccess(line2)
+    }
+    //city
+    if(cityvalue ===''){
+        setError(city, 'Plese enter your city*');
+    }
+
+    else if(!isNaN(cityvalue)){
+        setError(city,'City cannot be a number*');
+    }
+    else{
+        setSuccess(city)
+    }
+    //state/province
+    if(statevalue ===''){
+        setError(state, 'Plese enter your State/Province*');
+    }
+    else if(!isNaN(statevalue)){
+        setError(state,'State cannot be a number*');
+    }
+    else{
+        setSuccess(state)
+    }
+
+    //postal/zipcode
+    if(postalvalue==''){
+        setError(postal,'Postal/Zipcode cannot be empty*')
+    }
+    else if(postalvalue.length!=6){
+        setError(postal,'Postal code contains exactly 6 numbers*')
+    }
+    else{
+        setSuccess(postal)
+        
+    }
+    if (!document.querySelector('input[name="conferenceOption"]:checked')) {
+        setError(memnonmem,'Required*');
+        return false; 
+    }
+    else{
+        setSuccess(memnonmem,'');
+    }
+
+
+    if (!document.querySelector('input[name="pmethod"]:checked')) {
+        setError(pm,'Required*');
+        return false;
+
+    }
+    else{
+        setSuccess(pm,'');
+    }
+
+
+   
+}
+
+
