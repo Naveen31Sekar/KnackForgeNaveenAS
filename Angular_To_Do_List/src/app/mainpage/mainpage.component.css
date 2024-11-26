@@ -1,0 +1,30 @@
+#sidediv{
+    width: 220px;
+    height: 300px;
+}
+.menubtn{
+    height: 50px;width: 220px;
+}
+#mainrow{
+    height: 10px;
+}
+.example-container{
+    width: 220px;
+    height: 1000px;
+    background: none;
+}
+.example-sidenav{
+    background-color: rgb(228, 228, 228);
+    height: 1400px;
+}
+.sidebarcontent{
+    height: 50px;
+    width: 200px;
+    padding-top: 10px;
+    padding-left: 20px;
+    background-color: darkorchid;
+}
+
+#basicoperation{
+    height: 500px;
+}

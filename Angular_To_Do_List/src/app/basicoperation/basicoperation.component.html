@@ -1,0 +1,37 @@
+<div class="todo-container">
+    <h2>{{ title }}</h2>
+    <div class="input-group">
+      <input [(ngModel)]="taskInput" type="text" placeholder="Enter a task" />
+      <button (click)="addTask()">Add Task</button>
+    </div>
+
+<!-- separate divisions for pending and completed -->
+  </div>
+  <div class="tasks-section">
+    <h3>Pending Tasks</h3>
+    <ul class="task-list">
+      <li *ngFor="let task of pendingTasks; let i = index" class="task-item">
+        <span>{{ task.text }}</span>
+        <div class="task-actions">
+          <button (click)="markCompleted(i)" class="btn">Completed</button>
+          <button (click)="editTask(i, false)" class="btn">Edit</button>
+          <button (click)="removeTask(i, false)" class="btn">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tasks-section" style="display: none;" id="hidediv">
+    <h3>Completed Tasks</h3>
+    <ul class="task-list">
+      <li *ngFor="let task of completedTasks; let i = index" class="task-item">
+        <span>{{ task.text }}</span>
+        <div class="task-actions">
+          <button (click)="markPending(i)" class="btn" id="pendingbtn">Mark as Pending</button>
+          <button (click)="editTask(i, true)" class="btn">Edit</button>
+          <button (click)="removeTask(i, true)" class="btn">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <p (click)="change()" id="changebtn">Click to Change</p>
