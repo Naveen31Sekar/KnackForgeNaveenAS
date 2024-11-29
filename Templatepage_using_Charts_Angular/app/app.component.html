@@ -1,0 +1,199 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- left side -->
+<body class="bg-light">
+<div class="container-fluid">
+  <div id="topnav" class="container-fluid d-flex align-items-center justify-content-between p-3" style="background-color: blueviolet; color: blue; border: solid;">
+    <div id="brand" class="d-flex align-items-center mx-5" style="padding: 20px;" (click)="drawer.toggle()">
+      <img src="assets/images/crown.png" id="logo" alt="logo" style="height: 20px; width: 20px;">
+      <span class="mx-2 me-5">URORA</span>
+      
+      <div id="search" class="d-flex align-items-start justify-content-between p-3 pe-5" style="opacity: 50%;">
+        <input type="search" class="form-control me-2" placeholder="Search" style="max-width: 500px;">
+        <button class="btn btn-light me-2">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </div>
+    <!-- right side -->
+   
+    <div class="d-flex align-items-center">
+      <div class="endimgdiv"><mat-icon class="endimg mt-2">mail</mat-icon></div>
+      <div class="endimgdiv"><mat-icon class="endimg mt-2">notifications</mat-icon></div>
+      <div class="endimgdiv"><mat-icon class="endimg mt-2">account_circle</mat-icon></div>
+
+
+    </div>
+  </div>
+
+  <div class="container-fluid sidecontainer">
+    <div class="row">
+      <div class="col-2 p-0">
+        <mat-drawer-container class="example-container" autosize>
+          <mat-drawer #drawer class="example-sidenav" mode="side">
+            <nav class="sidecontentbox">
+
+              <label>Main</label>
+              <div class="leftcontent d-flex align-items-center">
+                <mat-icon>dashboard</mat-icon>
+                <p class="sidecontent ms-2 mb-0">Dashboard</p>
+              </div>
+              
+              <div class="leftcontent d-flex align-items-center">
+                <mat-icon class="pe-3">calendar_today</mat-icon>
+                <p class="sidecontent ms-2 mt-3">Calendar</p>
+              </div>
+            
+                <label>Components</label>
+
+              
+              <div class="leftcontent d-flex align-items-center">
+                <p class="sidecontent">UI Elements</p>
+              </div>
+              
+      
+                <p class="sidecontent d-flex align-items-center">Tables</p>
+
+              
+              <div class="leftcontent d-flex align-items-center">
+                <p class="sidecontent">Forms</p>
+              </div>
+              
+              <div class="leftcontent d-flex align-items-center">
+                <p class="sidecontent">Icons</p>
+              </div>
+              
+              <div class="leftcontent d-flex align-items-center">
+                <p class="sidecontent">Charts</p>
+              </div>
+
+                <label>Extra</label>
+
+              
+              <div class="leftcontent d-flex align-items-center">
+                <p class="sidecontent">Maps</p>
+              </div>
+              
+              <div class="leftcontent d-flex align-items-center">
+                <p class="sidecontent">Pages</p>
+              </div>
+              
+            </nav>
+          </mat-drawer>
+        </mat-drawer-container>
+      </div>
+
+      <div class="col-10 p-4">
+        <div class="row">
+          <div class="col-10"><h3 class="headings">Dashboard</h3></div>
+          <div class="col-2"><h3 class="uroraname">Urora / Dashboard</h3></div>
+          <!-- Box Grid -->
+          <div class="col-3 mb-3">
+            <div class="fourbox p-3 d-flex justify-content-center align-items-center" style="height: 100px; background-color: rgb(252, 112, 57);">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-6"><mat-icon class="fourimages" id="fbi1">track_changes</mat-icon></div>
+                <div class="col-2 fbnum">18090 <label class="fbtext">visits today</label> </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 mb-3">
+            <div class="fourbox p-3 d-flex justify-content-center align-items-center" style="height: 100px; background-color: rgb(130, 132, 241);">
+              <div class="col-6"><mat-icon>supervisor_account</mat-icon>
+              </div>
+                <div class="col-2 fbnum">562 <label for="" class="fbtext">New Users</label> </div>
+            </div>
+          </div>
+          <div class="col-3 mb-3">
+            <div class="fourbox p-3 d-flex justify-content-center align-items-center" style="height: 100px; background-color: rgb(126, 151, 125);">
+              <div class="col-6"><mat-icon>fiber_new</mat-icon>
+              </div>
+                <div class="col-2 fbnum">7514 <label for="" class="fbtext">New Orders</label> </div>
+            </div>
+          </div>
+          <div class="col-3 mb-3">
+            <div class="fourbox p-3 d-flex justify-content-center align-items-center" style="height: 100px; background-color: rgb(64, 34, 236);">
+              <div class="col-6"><mat-icon>calculate</mat-icon>
+              </div>
+                <div class="col-2 fbnum">$3287<label for="" class="fbtext">Total Sales</label> </div>
+            </div>
+          </div>
+        </div>
+        <div class="row"><div class="col-5 p-3 m-2 secondboxes" id="box1"><h3 class="headings">Statistics</h3> 
+          <canvasjs-chart [options]="chart1Options" class="chart1 d-flex"></canvasjs-chart>    
+        </div> 
+        
+        <div class="col-7 p-3 m-2 secondboxes" id="box2"> <h3 class="headings">Revenue</h3> 
+          <canvasjs-chart [options]="chart2Options" class="chart1 d-flex"></canvasjs-chart>    
+        </div> </div>
+
+        <div class="row">
+          <div class="col-5 p-3 m-2 thirdboxes" id="threebox1"><h3 class="headings">Product Stock</h3>
+            <canvasjs-chart [options]="chart3Options"></canvasjs-chart>    
+          </div> 
+          
+          <div class="col-7 p-3 m-2 thirdboxes" id="threebox2"><h3 class="headings">Order Status</h3>
+            <div class="row">
+              <div class="col p-3 text-muted">
+                Todays Performance
+              </div>
+              <div class="col p-3 ms-5 fivetwopercent">
+                <mat-icon>keyboard_arrow_up</mat-icon>52%
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-5 ps-4">82%</div>
+              <div class="col-5">Delivered</div>
+              <div class="col-2">18%</div>
+            </div>
+            <div class="row"><div class="col-8 lline1 mb-4"></div><div class="col-4 mb-4 lline2"></div></div>
+            <div class="row">
+              <div class="col-5 ps-4">82%</div>
+              <div class="col-5">Delivered</div>
+              <div class="col-2">18%</div>
+            </div>
+            <div class="row"><div class="col-8 lline1 mb-4"></div><div class="col-4 lline2 mb-4"></div></div>
+            <div class="row">
+              <div class="col-5 ps-4">82%</div>
+              <div class="col-5">Delivered</div>
+              <div class="col-2">18%</div>
+            </div>
+            <div class="row"><div class="col-8 lline1"></div><div class="col-4 lline2"></div></div>
+            <div class="row"><div class="col-10"><p>On Time</p></div><div class="col-2"><p>Late</p></div></div>
+          </div> 
+          
+
+          <div class="col-5 p-3 m-2 thirdboxes" id="threebox3">
+            <div class="container detail"><img src="assets/images/gentleman.jpeg" alt="Gentleman Image" class="manimage" >
+              <div class="row">
+                <h3 class="detailcontent pt-1" style="height: 15px;">Robert N. Charlier</h3>
+                <h4 class="text-muted">Founder of Company</h4>
+              </div>
+              <div class="row container">
+                <button id="followbutton" class="btn ms-5 mb-4">Follow</button>
+                <div class="col-6 detailcontent"><h2 class="insta">15521</h2>
+                  <h2 class="insta">Followers</h2> </div>
+                <div class="col-6 detailcontent"><h2 class="insta">772</h2>
+                  <h2 class="insta">Following</h2></div>
+              </div>
+            </div>
+
+            
+
+          </div> 
+
+
+        </div>
+        <div class="row"><div class="col-5 p-3 m-2 fourthboxes" id="fourbox1">OrderList</div> <div class="col-7 p-3 m-2 fourthboxes" id="fourbox2">New Users</div> </div>
+
+      </div>
+    
+    
+  
+      
+    </div>
+  </div>
+
+</div>
+<div>
+
+</div>
