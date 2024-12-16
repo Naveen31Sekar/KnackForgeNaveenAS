@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Dashboard</title>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-left">
+            <h2>Todo Dashboard</h2>
+        </div>
+        <div class="navbar-right">
+            <!-- <label for="username">{{this.username}}</label> -->
+            <button class="logout-btn" routerLink="/logout">Logout</button>
+        </div>
+    </header>
+
+    <div class="main-content">
+        
+        <div id="create">
+            <app-create></app-create>
+        </div>
+
+        
+        <div id="index">
+            <app-index></app-index>
+        </div>
+        
+        <div id="view">
+            <app-view></app-view>
+        </div>
+    </div>
+
+</body>
+</html>

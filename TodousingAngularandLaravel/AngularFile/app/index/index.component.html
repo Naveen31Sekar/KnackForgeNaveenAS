@@ -1,0 +1,17 @@
+<h1>Pending Tasks</h1>
+<table>
+    <tr>
+        <th>Task</th>
+        <th>Description</th>
+        <th>Options</th>
+    </tr>
+
+    <tr *ngFor="let task of tasks">
+        <td>{{task.task}}</td>
+        <td>{{task.description}}</td>
+        <td>
+            <button><a (click)="movetocomplete(task.id)">Mark as Done</a></button>
+            <button><a (click)="delete(task.id)">Delete Task</a></button>
+        </td>
+    </tr>
+</table>

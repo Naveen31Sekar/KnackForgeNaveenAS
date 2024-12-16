@@ -1,0 +1,10 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="form-group">
+      <h1>Create Task</h1>
+      <label for="task">Enter Task</label>
+      <input id="task" type="text" formControlName="task" class="form-control"/>
+      <label for="description">Enter Description</label>
+      <input id="description" type="text" formControlName="description" class="form-control" />
+      <button type="submit" class="btn btn-primary">Add Task</button>
+  </div>
+</form>

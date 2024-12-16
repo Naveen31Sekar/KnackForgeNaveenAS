@@ -1,0 +1,118 @@
+/* General Layout Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+}
+
+.navbar {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar h2 {
+    font-size: 1.8em;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar-right .logout-btn {
+    background-color: #E74C3C;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-right .logout-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    padding: 30px;
+}
+
+/* Responsive Layout for Larger Screens */
+@media (min-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* Section Titles */
+h1 {
+    font-size: 2.5em;
+    color: #34495E;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+button {
+    background-color: #3498DB;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980B9;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+th {
+    background-color: #34495E;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+td {
+    font-size: 1em;
+    color: #555;
+}
+
+tr:hover {
+    background-color: #ecf0f1;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
